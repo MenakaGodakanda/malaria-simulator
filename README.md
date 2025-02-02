@@ -96,14 +96,80 @@ The program save the simulation results to a CSV file in the `data/` folder.
 
 - This file can be used for further analysis or visualization.
 
+### Expected Behavior
+#### 1. What Looks Correct
+- The infection starts at 10 and increases to 15 (Day 1), which is expected due to transmission.
+- After Day 2, the numbers decline, which is logical as recoveries and interventions take effect.
+- Final infections reach 0 (Day 11-12), which is expected given the high medication effectiveness (60%).
+
+#### 2. What Looks Wrong
+- Weird Increase in Cases (Day 5-6 & Day 9)
+  - Day 4 → Day 5: Infected jumps from 4 → 6
+  - Day 5 → Day 6: Infected jumps from 6 → 8
+  - Day 8 → Day 9: Infected jumps from 1 → 4
+
+- Why is this strange?
+  - With a low 5% transmission rate and 30% population protected by bed nets, new infections should gradually decrease, not randomly increase.
+  - Once cases drop to 1 infected person (Day 8), it is highly unlikely that cases suddenly rise again (Day 9: 4 infected).
+  - If medication is 60% effective, infections should decline smoothly.
+
+- Fluctuation Instead of a Smooth Decline
+  - In a well-functioning model, you should not see infections jump back up after dropping.
+  - Possible cause: A bug in the reinfection logic where recovered people become susceptible again too soon.
+
+#### 3. Possible Causes of Error
+- Incorrect Recovery Calculation
+  - Ensure that recovered people stay immune and are not reinfected immediately.
+- Reinfection Due to Transmission Rate Misapplication
+  - The transmission rate (5%) should only apply to susceptible individuals.
+  - If the code accidentally applies it to recovered individuals, it could cause reinfections.
+- Check How Medication is Implemented
+  - With 60% medication effectiveness, the decline in infections should be much smoother.
+
 ### Summary
 This simulation demonstrates how malaria spreads and how interventions help control it, making it a valuable epidemiology tool.
 
 ## Example Output 02
 ![Screenshot 2025-02-02 150014](https://github.com/user-attachments/assets/3aeba9ff-3f78-4478-9cf6-18eb001bf760)
 
+### Expected Behavior
+#### 1. Initial Increase or Stability:
+- The infection count should increase or remain stable in the first few days because the transmission rate (6%) is higher than the recovery rate (2%).
+- Infections decline from Day 1 (65) to Day 2 (55), which suggests that transmission is not outpacing recovery.
+- *This is possible, but it depends on how many people were protected by bed nets and how effective medication was.
+
+#### 2. Gradual Decline in Infections:
+- The recovery rate is low (2%), so the decline should be slow unless medication is significantly helping.
+- By Day 10, infections are at 7, which means recovery & interventions are working effectively.
+- The 40% medication effectiveness could be speeding up the recovery.
+
+#### 3. Small Fluctuation in Infections (Days 11-25):
+- Day 11-24: Infection count remains between 1 and 2 infected individuals.
+- This could happen if:
+- A small number of people are still transmitting malaria.
+- Some reinfections occur.
+- This is unusual but not impossible since the transmission rate is low.
+
+#### 4. Simulation Ends at Zero Cases (Day 26):
+- This is expected as the infected individuals eventually recover without spreading to new people.
+
 ## Example Output 03
 ![Screenshot 2025-02-02 150227](https://github.com/user-attachments/assets/55a2c320-5fcd-4b05-b975-4cbe31885c3f)
+
+### Expected Behavior of the Simulation
+- Day 1-2: The infection count initially rises or remains steady due to ongoing transmission.
+- Day 3-10: The number of infected individuals declines steadily due to recoveries & interventions (bed nets reducing transmission and medication helping recovery).
+- Day 11-20: The number of infections drops sharply as more people recover or are protected.
+- Day 18: Zero infections, meaning the outbreak has ended.
+
+### Why Is This Output Reasonable?
+- Infections start at 80 and increase slightly (Day 1: 97 infected) → Expected due to transmission.
+- Infections peak and decline as people recover (Recovery Rate = 6%) → Matches expected epidemic curve.
+- Interventions (30% bed nets & 20% medication) help reduce cases → Gradual decrease seen in data.
+- Simulation ends with zero infections → Since recovery + interventions stop further spread.
+
+
+
 
 ## Project Structure
 ```
