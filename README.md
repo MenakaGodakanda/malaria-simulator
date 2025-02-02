@@ -70,7 +70,7 @@ python malaria_simulator.py --pop_size 1000 --init_infected 10 --trans_rate 0.05
 |--bed_nets	| Proportion of people using bed nets	| 0.3 (30%)
 |--medication	| Effectiveness of malaria medication	| 0.6 (60%)
 
-## Example Output
+## Example Output 01
 ### 1. Console Output
 This shows the number of infected people each day. The infection may initially increase before interventions take effect, leading to a decline in cases.
 ![Screenshot 2025-02-02 134455](https://github.com/user-attachments/assets/981865e1-d28a-4a82-a80f-91042eaa23fc)
@@ -98,6 +98,12 @@ The program save the simulation results to a CSV file in the `data/` folder.
 
 ### Summary
 This simulation demonstrates how malaria spreads and how interventions help control it, making it a valuable epidemiology tool.
+
+## Example Output 02
+![Screenshot 2025-02-02 150014](https://github.com/user-attachments/assets/3aeba9ff-3f78-4478-9cf6-18eb001bf760)
+
+## Example Output 03
+![Screenshot 2025-02-02 150227](https://github.com/user-attachments/assets/55a2c320-5fcd-4b05-b975-4cbe31885c3f)
 
 ## Project Structure
 ```
