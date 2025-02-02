@@ -60,7 +60,7 @@ python malaria_simulator.py --pop_size 1000 --init_infected 10 --trans_rate 0.05
 - This will simulate 1000 individuals, with 10 initially infected, a 5% transmission rate, and a 1% recovery rate. 30% of the population uses bed nets, and 60% receive medication.
 
 ### Available Parameters
-| Parameter	| Description	| Input Value |
+| Parameter	| Description	| Default Value |
 |------------|-----------|-------------|
 |--pop_size |	Total population size	| 1000 |
 |--init_infected	| Initial number of infected individuals	| 10
