@@ -1,4 +1,4 @@
-![Screenshot 2025-02-02 134532](https://github.com/user-attachments/assets/b14feab6-ee64-4ca9-a286-85ba12480c43)# Malaria Epidemiology Simulator
+# Malaria Epidemiology Simulator
 The Malaria Epidemiology Simulator is a Python-based tool that models the spread of malaria and evaluates the impact of various interventions such as bed nets, medications, and vaccinations. This project helps researchers and public health professionals understand malaria transmission and how different control strategies affect infection rates.
 
 ## Overview
