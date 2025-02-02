@@ -1,4 +1,4 @@
-# Malaria Epidemiology Simulator
+![Screenshot 2025-02-02 134532](https://github.com/user-attachments/assets/b14feab6-ee64-4ca9-a286-85ba12480c43)# Malaria Epidemiology Simulator
 The Malaria Epidemiology Simulator is a Python-based tool that models the spread of malaria and evaluates the impact of various interventions such as bed nets, medications, and vaccinations. This project helps researchers and public health professionals understand malaria transmission and how different control strategies affect infection rates.
 
 ## Overview
@@ -73,10 +73,13 @@ python malaria_simulator.py --pop_size 1000 --init_infected 10 --trans_rate 0.05
 ## Example Output
 ### 1. Console Output
 This shows the number of infected people each day. The infection may initially increase before interventions take effect, leading to a decline in cases.
+![Screenshot 2025-02-02 134455](https://github.com/user-attachments/assets/981865e1-d28a-4a82-a80f-91042eaa23fc)
+![Screenshot 2025-02-02 134515](https://github.com/user-attachments/assets/034dedd5-6b9a-4dca-b5e9-9be2b1e0952b)
 
 ### 2. Graphical Output (Matplotlib)
 A line graph is displayed, showing the number of infected individuals over time.
 - The infection spreads initially, then declines as interventions take effect.
+![Screenshot 2025-02-02 134515 - Copy](https://github.com/user-attachments/assets/5cc4c5c3-9cad-4e91-9aa8-e7f1789cb6e1)
 
 - **X-axis**: Days (1 to 100)
 - **Y-axis**: Number of Infected Individuals
@@ -88,6 +91,8 @@ A line graph is displayed, showing the number of infected individuals over time.
 ### 3. CSV Output (data/simulation_results.csv)
 The program save the simulation results to a CSV file in the `data/` folder.
 - Example CSV Output (`data/simulation_results.csv`)
+![Screenshot 2025-02-02 134532](https://github.com/user-attachments/assets/efde5e5a-abe1-47cd-895b-46b23735e881)
+![Screenshot 2025-02-02 134553](https://github.com/user-attachments/assets/0cba40f7-824a-4819-ac21-16088a03963e)
 
 - This file can be used for further analysis or visualization.
 
@@ -100,9 +105,6 @@ malaria-simulator/
 │── malaria_simulator.py   # Main script to run the simulation
 │── population.py          # Defines population and infection dynamics
 │── interventions.py       # Implements malaria control strategies
-│── visualize.py           # Generates graphs and reports
-│── config.json            # Stores default simulation parameters
-│── requirements.txt       # Lists dependencies for the project
 │── README.md              # Project documentation
 │── data/                  # Folder for storing simulation results (CSV)
 ```
