@@ -131,6 +131,15 @@ The program save the simulation results to a CSV file in the `data/` folder.
 This simulation demonstrates how malaria spreads and how interventions help control it, making it a valuable epidemiology tool.
 
 ## Example Output 02
+### Input Parameters:
+ 
+- **Population** = 1000
+- **Initial Infected** = 60
+- **Transmission Rate** = 6%
+- **Recovery Rate** = 2%
+- **Bed Nets** = 20% Coverage
+- **Medication** = 40% Effective
+
 ![Screenshot 2025-02-02 150014](https://github.com/user-attachments/assets/3aeba9ff-3f78-4478-9cf6-18eb001bf760)
 
 ### Expected Behavior
@@ -155,6 +164,15 @@ This simulation demonstrates how malaria spreads and how interventions help cont
 - This is expected as the infected individuals eventually recover without spreading to new people.
 
 ## Example Output 03
+### Input Parameters:
+ 
+- **Population** = 1000
+- **Initial Infected** = 80
+- **Transmission Rate** = 8%
+- **Recovery Rate** = 6%
+- **Bed Nets** = 30% Coverage
+- **Medication** = 20% Effective
+
 ![Screenshot 2025-02-02 150227](https://github.com/user-attachments/assets/55a2c320-5fcd-4b05-b975-4cbe31885c3f)
 
 ### Expected Behavior of the Simulation
@@ -168,9 +186,6 @@ This simulation demonstrates how malaria spreads and how interventions help cont
 - Infections peak and decline as people recover (Recovery Rate = 6%) → Matches expected epidemic curve.
 - Interventions (30% bed nets & 20% medication) help reduce cases → Gradual decrease seen in data.
 - Simulation ends with zero infections → Since recovery + interventions stop further spread.
-
-
-
 
 ## Project Structure
 ```
