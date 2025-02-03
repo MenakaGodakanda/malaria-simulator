@@ -37,9 +37,9 @@ The simulation uses a discrete-time approximation of the SIR equations. Instead 
 
 ### Population Class (`Population.py`)
 Each individual in the population is assigned a state:
-- Susceptible (0)
-- Infected (1)
-- Recovered (2)
+- **Susceptible (0)**
+- **Infected (1)**
+- **Recovered (2)**
 
 At each time step:
 1. New infections occur based on a random probability tied to the transmission rate $$\beta$$.
@@ -53,7 +53,7 @@ if self.states[i] == 0:  # Susceptible
 ```
 - A susceptible individual 𝑆 has a chance to become infected.
 - If **at least one infected person exists** ( $$\sum$$𝐼 > 0), a random number is drawn.
-- If rand < $$\beta$$, the individual transitions to **infected (1)**.
+- If $$rand$$ < $$\beta$$, the individual transitions to **infected (1)**.
 This implements the discrete-time approximation:
 
 $$S_{t+1} = S_{t} - \Delta S$$
